@@ -89,13 +89,38 @@ Then open your browser at:
 ---
 
 ## 🧮 Models Used
-Model	Type	Description
-Linear Regression	Statistical ML	Predicts next-day close using weighted sum of features
-LSTM (Long Short-Term Memory)	Deep Learning	Learns temporal dependencies in price sequences
-Evaluation Metric:
 
-Mean Squared Error (MSE)
+| Model | Type | Description |
+|--------|------|-------------|
+| **Linear Regression** | Statistical Machine Learning | Predicts the next-day closing price using a weighted combination of features such as SMA, RSI, and sentiment. It assumes a linear relationship between independent variables (features) and the dependent variable (closing price). |
+| **LSTM (Long Short-Term Memory)** | Deep Learning (Recurrent Neural Network) | Captures time-dependent patterns in sequential stock data. LSTMs are designed to learn from sequences (e.g., price trends over several days) and remember long-term dependencies, making them ideal for financial time series forecasting. |
 
-Measures average squared difference between predicted and true values
+---
 
-Lower MSE = better model
+### ⚙️ Evaluation Metric — *Mean Squared Error (MSE)*
+
+The **Mean Squared Error (MSE)** measures how close the model’s predictions are to the actual observed values.  
+It is defined as:
+
+\[
+MSE = \frac{1}{n} \sum_{i=1}^{n} (y_{true}^{(i)} - y_{pred}^{(i)})^2
+\]
+
+Where:
+- \( y_{true} \) = actual closing price  
+- \( y_{pred} \) = predicted closing price  
+- \( n \) = number of test samples  
+
+**Lower MSE = Better model performance**
+
+---
+
+### 🧠 Model Comparison Summary
+
+| Model | Advantages | Limitations |
+|--------|-------------|-------------|
+| **Linear Regression** | Simple, interpretable, fast to train | Assumes linearity; fails for complex temporal patterns |
+| **LSTM** | Learns sequential dependencies and temporal patterns | Requires more data and compute power; longer training time |
+
+> In our project, Linear Regression serves as a **baseline model**, while LSTM is the **advanced model** that captures time-series dependencies for improved forecasting accuracy.
+
