@@ -1,14 +1,13 @@
-streamlit==1.39.0
-yfinance==0.2.43
-pandas==2.2.2
-numpy==1.26.4
-scikit-learn==1.5.2
-matplotlib==3.9.2
-textblob==0.18.0.post0
-python-dotenv==1.0.1
-requests==2.32.3
+streamlit
+yfinance
+pandas
+numpy
+scikit-learn
+matplotlib
+textblob
+python-dotenv
+requests]
 # Optional (LSTM): If you want LSTM, install one of these:
-tensorflow==2.17.0
+tensorflow
 # OR for cpu-only on some systems:
-# tensorflow-cpu==2.17.0
-
+tensorflow-cpu
