@@ -6,8 +6,13 @@ scikit-learn
 matplotlib
 textblob
 python-dotenv
-requests]
-# Optional (LSTM): If you want LSTM, install one of these:
-tensorflow
-# OR for cpu-only on some systems:
-tensorflow-cpu
+requests
+joblib
+plotly
+xgboost
+lightgbm
+
+# Optional packages (install if you want these features):
+# streamlit-autorefresh  # For auto-refresh every 30s
+# tensorflow             # For LSTM model
+# tensorflow-cpu         # Smaller CPU-only version
